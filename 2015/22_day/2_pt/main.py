@@ -18,6 +18,12 @@ def main(data):
     return least_mana_used
 
 def simulateTurn(player_hp, player_mana, player_armor, boss_hp, boss_damage, active_spell_list, spell_list, player_turn, mana_used, least_mana_used):
+
+    if player_turn:
+        player_hp -= 1
+        if player_hp <= 0:
+            return least_mana_used
+
     new_active_spell_list = []
     for active_spell in active_spell_list:
         boss_hp -= active_spell[2]
