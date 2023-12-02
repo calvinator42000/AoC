@@ -3,7 +3,7 @@ import math
 
 def main(data):
     pkg_list = parseData(data.split('\n'))
-    possible_groups = sorted(list(getPossibleGroups(pkg_list, int(sum(pkg_list)/3))), key=lambda x: len(x))
+    possible_groups = sorted(list(getPossibleGroups(pkg_list, int(sum(pkg_list)/4))), key=lambda x: len(x))
     min_group_size = len(possible_groups[0])
     group1_candidates = []
     for group in possible_groups:
