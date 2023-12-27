@@ -2,18 +2,19 @@ import sys
 
 def main(data):
     grid = parseData(data.split('\n'))
-    min_heat_loss = traverse(grid)
+    # min_heat_loss = traverse(grid, 1, 3)
+    min_heat_loss = traverse(grid, 4, 10)
     return min_heat_loss
 
-def traverse(grid):
+def traverse(grid, min_straight, max_straight):
     min_heat_loss = sys.maxsize
     node_dict = {}
     queue = []
     ## Queue Entry Format: (loc, dir, straight)
-    queue.append(((0,0), (0,1), 0))
-    node_dict[((0,0), (0,1), 0)] = 0
-    queue.append(((0,0), (1,0), 0))
-    node_dict[((0,0), (1,0), 0)] = 0
+    queue.append(((0,0), (0,1), 1))
+    node_dict[((0,0), (0,1), 1)] = 0
+    queue.append(((0,0), (1,0), 1))
+    node_dict[((0,0), (1,0), 1)] = 0
     while len(queue) > 0:
         node = queue.pop(0)
         loc, dir, straight = node
@@ -22,8 +23,10 @@ def traverse(grid):
             if next_dir == dir:
                 next_straight = straight + 1
             else:
-                next_straight = 0
-            if next_straight <= 2:
+                if straight < min_straight:
+                    continue
+                next_straight = 1
+            if next_straight <= max_straight:
                 next_loc = (loc[0] + next_dir[0], loc[1] + next_dir[1])
                 if 0 <= next_loc[0] < len(grid) and 0 <= next_loc[1] < len(grid[0]):
                     next_node = (next_loc, next_dir, next_straight)
@@ -32,7 +35,7 @@ def traverse(grid):
                         node_dict[next_node] = sys.maxsize
                     if next_heat < min_heat_loss and next_heat < node_dict[next_node]:
                         node_dict[next_node] = next_heat
-                        if next_loc == (len(grid)-1, len(grid[0])-1):
+                        if next_loc == (len(grid)-1, len(grid[0])-1) and next_straight > 3:
                             min_heat_loss = min(next_heat, min_heat_loss)
                         else:
                             queue.append(next_node)
