@@ -35,11 +35,5 @@ def parseData(line_list):
         grid.append(line)
     return (start, grid)
 
-def printGrid(grid):
-    for line in grid:
-        print("".join(line))
-    print()
-    return None
-
 if __name__ == "__main__":
     print(main(open(sys.argv[1]).read().rstrip()))
