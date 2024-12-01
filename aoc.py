@@ -26,10 +26,7 @@ if test:
 else:
     input_file = "input"
 
-print("Year:", year)
-print("Day:", day)
-print("Part:", part)
-print("Input_File:", input_file)
+print("%02d/%d Part %d" %(day, year, part))
 
 input_path = "%d/%02d_day/%01d_pt/%s" % (year, day, part, input_file)
 print("Input_Path:", input_path)
