@@ -1,5 +1,5 @@
 import sys
-def main(data):
+def solve(data):
     data_list = data.split('\n')
     #boss = Character("Boss", int(data_list[0].split(' ')[2]), int(data_list[1].split(' ')[1]), 0, 0)
     #player = Character("Player", 50, 0, 0, 500)
@@ -58,4 +58,4 @@ def simulateTurn(player_hp, player_mana, player_armor, boss_hp, boss_damage, act
     return least_mana_used
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

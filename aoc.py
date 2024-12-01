@@ -39,5 +39,5 @@ mod = import_module(".main", package_path)
 print()
 
 print("Result:")
-result = mod.main(open(input_path).read().rstrip())
+result = mod.solve(open(input_path).read().rstrip())
 print(result)

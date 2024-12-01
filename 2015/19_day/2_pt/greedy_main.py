@@ -1,7 +1,7 @@
 import sys
 from random import shuffle
 
-def main(data):
+def solve(data):
     molecule, replacement_list = parseData(data.split('\n'))
     replacement_list.sort(key = lambda x: len(x[0]), reverse = True)
     generation_list = generateMolecule(molecule, "e", replacement_list, [molecule])
@@ -69,4 +69,4 @@ def parseData(data_list):
     return (molecule, replacement_list)
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

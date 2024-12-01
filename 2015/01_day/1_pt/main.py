@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     floor = 0
     for char in data:
         if char == '(':
@@ -10,4 +10,4 @@ def main(data):
     return floor
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read()))
+    print(solve(open(sys.argv[1]).read()))

@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     ## (<hit_points>, <damage>, <armor>)
     boss_stats = parseData(data)
     ## (<damage>, <cost>)
@@ -58,4 +58,4 @@ def parseData(data):
     return (hit_points, damage, armor)
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

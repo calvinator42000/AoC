@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     grid = parseData(data.split('\n'))
     start = (0,1)
     end = (len(grid)-1,len(grid[0])-2)
@@ -70,4 +70,4 @@ def parseData(line_list):
     return grid
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

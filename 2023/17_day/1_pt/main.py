@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     grid = parseData(data.split('\n'))
     min_heat_loss = traverse(grid)
     return min_heat_loss
@@ -45,4 +45,4 @@ def parseData(line_list):
     return tuple(grid)
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

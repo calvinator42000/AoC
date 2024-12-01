@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     points = 0
     for card in data.split('\n'):
         num_win_card = 0
@@ -12,4 +12,4 @@ def main(data):
     return points
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

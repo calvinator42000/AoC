@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     lines = data.split('\n')
     num_sum = 0
     row = 0
@@ -43,4 +43,4 @@ def getNum(line, start):
     return num
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

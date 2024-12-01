@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     row_data_list = parseData(data.split('\n'))
     com_sum = 0
     for row_data in row_data_list:
@@ -46,4 +46,4 @@ def parseData(line_list):
     return row_data_list
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     hailstones = parseData(data.split('\n'))
     area = (200000000000000,400000000000000)
     future_collisions = 0
@@ -29,4 +29,4 @@ def parseData(line_list):
     return hailstones
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

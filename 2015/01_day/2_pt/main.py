@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     floor = 0
     i = 0
     while floor >= 0:
@@ -13,4 +13,4 @@ def main(data):
     return i
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read()))
+    print(solve(open(sys.argv[1]).read()))

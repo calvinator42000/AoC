@@ -140,7 +140,7 @@ class Brick:
     def __str__(self):
         return f"id: {self.id}\nloc: {self.x[0]},{self.y[0]},{self.z[0]}~{self.x[1]},{self.y[1]},{self.z[1]}\nrested: {self.rested}\nabove: {self.above}\nbelow: {self.below}\n"
 
-def main(data):
+def solve(data):
     brick_dict = parseData(data.split('\n'))
     space = Space(brick_dict)
     safe_count = space.getSafeDisintegrate()
@@ -154,4 +154,4 @@ def parseData(line_list):
     return brick_dict
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

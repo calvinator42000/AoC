@@ -1,7 +1,7 @@
 import sys
 import math
 
-def main(data):
+def solve(data):
     game_dict = parseData(data.split('\n'))
     power_sum = 0
     for game_id in game_dict.keys():
@@ -32,4 +32,4 @@ def parseData(data_lines):
     return game_dict
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

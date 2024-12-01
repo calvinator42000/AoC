@@ -1,7 +1,7 @@
 import sys
 import re
 
-def main(data):
+def solve(data):
     line_list = data.split('\n')
 
     race = tuple(map(lambda x: int(re.findall(r'\d+', x.replace(' ',''))[0]), line_list))
@@ -9,4 +9,4 @@ def main(data):
     return sum(map(lambda x: (x*(race[0]-x)) > race[1], range(1,race[0])))
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

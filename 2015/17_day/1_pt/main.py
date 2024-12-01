@@ -9,7 +9,7 @@ class Container:
         return str(self.capacity) + ": " + str(self.filled)
         
 
-def main(data):
+def solve(data):
     containers = []
     for line in data.split('\n'):
         containers.append(Container(int(line)))
@@ -49,4 +49,4 @@ def getUsedContainers(container_list):
     return output
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

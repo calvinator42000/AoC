@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     ribbon = 0
     for line in data.split('\n'):
         if len(line) > 0:
@@ -11,4 +11,4 @@ def main(data):
     return ribbon
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read()))
+    print(solve(open(sys.argv[1]).read()))

@@ -98,7 +98,7 @@ class Light:
         else:
             return "." + str(self.neighbors_on)
 
-def main(data):
+def solve(data):
     grid = Grid(data)
     duration = 100
     for i in range(duration):
@@ -106,4 +106,4 @@ def main(data):
     return grid.countLights()
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

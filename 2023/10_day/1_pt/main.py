@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     pipe_dict = {
             '|': [(-1,0),(1,0)],
             '-': [(0,-1),(0,1)],
@@ -95,4 +95,4 @@ def parseData(line_list):
     return (animal_pos, grid)
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

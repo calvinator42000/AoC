@@ -2,7 +2,7 @@ import sys
 from random import shuffle
 import copy
 
-def main(data):
+def solve(data):
     return generateIntelligently(normalize(parseData(data.split('\n'))))
 
 def generateIntelligently(molecule):
@@ -46,4 +46,4 @@ def parseData(data_list):
     return molecule
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

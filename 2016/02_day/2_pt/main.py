@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     data_lines = data.split('\n')
     num_pad = ((None,None,1,None,None),(None,2,3,4),(5,6,7,8,9),(None,'A','B','C',None),(None,None,'D',None,None))
     dirs = {'U':(-1,0),'R':(0,1),'D':(1,0),'L':(0,-1)}
@@ -19,4 +19,4 @@ def main(data):
     return combination
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

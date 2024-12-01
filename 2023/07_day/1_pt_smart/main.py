@@ -1,7 +1,7 @@
 import sys
 import re
 
-def main(data):
+def solve(data):
     hand_list = list(map(lambda x: (x[:5], int(x[6:])), data.split('\n')))
     hand_list_scored = sorted(list(map(lambda x: (getScore(x[0]), x[1]), hand_list)), key=lambda x: x[0])
     final_score = 0
@@ -23,4 +23,4 @@ def getType(hand, face_list):
     return 7 - (list(map(lambda x: re.search(x, sorted_hand) != None, regex_list)).index(True))
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

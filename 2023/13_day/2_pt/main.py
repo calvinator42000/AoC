@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     pattern_list = parseData(data.split('\n'))
     note_sum = 0
     for pattern in pattern_list:
@@ -88,4 +88,4 @@ def parseData(line_list):
     return pattern_list
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

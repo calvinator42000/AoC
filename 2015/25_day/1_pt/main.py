@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     coords = parseData(data)
     return simulate(20151125,coords[0],coords[1])
 
@@ -22,4 +22,4 @@ def parseData(data):
     return (int(parsed_line[-3][:-1]), int(parsed_line[-1][:-1]))
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

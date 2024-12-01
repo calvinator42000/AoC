@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     seq = data.split(',')
     box_dict = {}
     for i in range(256):
@@ -39,4 +39,4 @@ def get_hash(string):
     return curr_val
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

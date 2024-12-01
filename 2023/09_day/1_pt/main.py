@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     sequence_list = parseData(data.split('\n'))
     final_sum = 0
     for sequence in sequence_list:
@@ -22,4 +22,4 @@ def parseData(line_list):
     return sequence_list
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

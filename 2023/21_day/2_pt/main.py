@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     start, grid = parseData(data.split('\n'))
     ## Solution assumes that the start is in the middle of the input and that the input is a square of odd dimensions
     steps = steps = 26501365
@@ -75,4 +75,4 @@ def parseData(line_list):
     return (start, grid)
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

@@ -37,7 +37,7 @@ class Module:
                 output_commands.append((output, not all(self.inputs.values()), self.name))
         return output_commands
 
-def main(data):
+def solve(data):
     module_dict = parseData(data.split('\n'))
     setConj(module_dict)
     push_count = 1000
@@ -83,4 +83,4 @@ def parseData(line_list):
     return module_dict
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

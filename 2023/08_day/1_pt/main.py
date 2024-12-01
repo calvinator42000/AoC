@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     instr_list, node_dict = parseData(data.split('\n'))
     step_count = 0
     instr_index = 0
@@ -19,4 +19,4 @@ def parseData(line_list):
     return (instr_list, node_dict)
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

@@ -70,7 +70,7 @@ class Edge:
         self.dist = dist
 
 
-def main(data):
+def solve(data):
     route_list = data.split("\n")
     graph = Graph(route_list)
     route_list = []
@@ -79,4 +79,4 @@ def main(data):
     return route_list[0][0]
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

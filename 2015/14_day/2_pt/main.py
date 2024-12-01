@@ -28,7 +28,7 @@ class Reindeer:
     def __str__(self):
         return self.name + ": " + str(self.distance)
 
-def main(data):
+def solve(data):
     reindeer_list = makeReindeer(data.split('\n'))
     duration = 2503
     for sec in range(duration):
@@ -55,4 +55,4 @@ def makeReindeer(data_list):
     return reindeer_list
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

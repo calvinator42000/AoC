@@ -10,7 +10,7 @@ class Node:
             if 0 <= next_loc[0] < len(grid) and 0 <= next_loc[1] < len(grid[0]) and grid[next_loc[0]][next_loc[1]] == '.':
                 self.neighbors.append(next_loc)
 
-def main(data):
+def solve(data):
     start, grid = parseData(data.split('\n'))
     step_count = 64
     possible_nodes = [start]
@@ -36,4 +36,4 @@ def parseData(line_list):
     return (start, grid)
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

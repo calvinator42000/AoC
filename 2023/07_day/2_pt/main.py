@@ -1,7 +1,7 @@
 import sys
 import re
 
-def main(data):
+def solve(data):
     face_list = ('J','2','3','4','5','6','7','8','9','T','Q','K','A')
     hand_list = list(map(lambda x: (x[:5], int(x[6:])), data.split('\n')))
     hand_list_scored = sorted(list(map(lambda x: (x[0], getScore(x[0], face_list), x[1]), hand_list)), key=lambda x: x[1])
@@ -53,4 +53,4 @@ def convertHand(hand, face_list):
     return (list(map(lambda x: face_list.index(x), list(hand[0]))), hand[1], hand[2])
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

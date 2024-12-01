@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     grid = getExpandedGalaxy(data.split('\n'))
     gal_list = getGalaxies(grid)
     path_sum = 0
@@ -40,4 +40,4 @@ def getExpandedGalaxy(line_list):
 
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

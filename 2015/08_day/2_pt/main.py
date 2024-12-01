@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     literal_len = 0
     decode_len = 0
     for line in data.split('\n'):
@@ -23,4 +23,4 @@ def encodeString(string):
 
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

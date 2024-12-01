@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     if data[0] == '{':
         num_sum = getObjectSum(data, 1, False)[0]
     elif data[0] == '[':
@@ -59,4 +59,4 @@ def getListSum(data, index):
 
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

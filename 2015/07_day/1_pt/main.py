@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     wire_list = {}
     command_list = []
     lines = data.split('\n')
@@ -75,4 +75,4 @@ def printWires(wire_list):
     return output
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

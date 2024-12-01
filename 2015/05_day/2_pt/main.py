@@ -1,7 +1,7 @@
 import sys
 import re
 
-def main(data):
+def solve(data):
     strings = data.split('\n')
     nice_count = 0
     for s in strings:
@@ -22,4 +22,4 @@ def check_sandwich(string):
     return valid.match(string) != None
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read()))
+    print(solve(open(sys.argv[1]).read()))

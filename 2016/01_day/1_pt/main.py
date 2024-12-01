@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     directions = data.split(", ")
     dirs = ((0,1),(1,0),(0,-1),(-1,0))
     coord = (0,0)
@@ -14,4 +14,4 @@ def main(data):
     return abs(coord[0]) + abs(coord[1])
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

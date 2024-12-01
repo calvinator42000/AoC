@@ -1,7 +1,7 @@
 import sys
 import math
 
-def main(data):
+def solve(data):
     pkg_list = parseData(data.split('\n'))
     possible_groups = sorted(list(getPossibleGroups(pkg_list, int(sum(pkg_list)/3))), key=lambda x: len(x))
     min_group_size = len(possible_groups[0])
@@ -27,4 +27,4 @@ def parseData(data_list):
     return sorted(pkg_list, reverse=True)
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

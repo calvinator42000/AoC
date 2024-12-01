@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     seed_range_list, map_list = parse_maps(data.split('\n'))
     location_ranges = []
     for seed_range in seed_range_list:
@@ -62,4 +62,4 @@ def parse_maps(line_list):
 
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

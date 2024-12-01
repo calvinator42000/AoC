@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     scores = {}
     for card in data.split('\n'):
         num_win_card = 0
@@ -18,4 +18,4 @@ def main(data):
     return len(queue)
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

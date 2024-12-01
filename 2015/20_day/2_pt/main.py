@@ -1,7 +1,7 @@
 import sys
 import math
 
-def main(data):
+def solve(data):
     required_presents = int(data)
     presents_per_elf = 11
     i = 0
@@ -30,4 +30,4 @@ def factorSum(number):
     return factor_sum
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

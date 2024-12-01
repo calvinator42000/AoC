@@ -2,7 +2,7 @@ import sys
 
 grid_size = 1000
 
-def main(data):
+def solve(data):
     grid = [[0 for i in range(grid_size)] for j in range(grid_size)]
     lines = data.split('\n')
     for l in lines:
@@ -50,4 +50,4 @@ def print_grid(grid):
     print(output)
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

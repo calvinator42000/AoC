@@ -19,7 +19,7 @@ class Sue:
         return output
 
 
-def main(data):
+def solve(data):
     sue_list = parse_data(data.split('\n'))
     MFCSAM_output = {}
     MFCSAM_output['children'] = 3
@@ -63,4 +63,4 @@ def parse_data(data_list):
 
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

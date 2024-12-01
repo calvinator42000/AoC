@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     num_sum = 0
     negative = False
     index = 0
@@ -19,4 +19,4 @@ def main(data):
     return num_sum
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

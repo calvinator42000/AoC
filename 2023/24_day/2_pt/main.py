@@ -12,7 +12,7 @@ class Ray:
     def __str__(self):
         return f"{int(self.x)}, {int(self.y)}, {int(self.z)} @ {int(self.a)}, {int(self.b)}, {int(self.c)}"
 
-def main(data):
+def solve(data):
     ray_list = parseData(data.split('\n'))
     return getSolRayZ3(ray_list)
 
@@ -94,4 +94,4 @@ def parseData(line_list):
     return ray_list
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

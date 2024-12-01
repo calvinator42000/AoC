@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     inst_list = parseData(data.split('\n'))
     inst_ptr = 0
     regs = {'a': 1, 'b': 0}
@@ -44,4 +44,4 @@ def parseData(data_list):
 
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

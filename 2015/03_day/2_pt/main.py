@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     house_list = []
     coords = [(0,0), (0,0)]
     house_list.append((0,0))
@@ -24,4 +24,4 @@ def main(data):
     return len(house_list)
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read()))
+    print(solve(open(sys.argv[1]).read()))

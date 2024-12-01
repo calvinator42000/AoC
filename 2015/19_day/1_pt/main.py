@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     molecule, replacement_dict = parseData(data.split('\n'))
     new_molecule_list = []
     i = 0
@@ -40,4 +40,4 @@ def parseData(data_list):
     return (molecule, replacement_dict)
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

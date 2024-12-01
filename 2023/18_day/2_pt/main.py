@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     inst_list = parseData(data.split('\n'))
     new_inst_list = convert_inst_list(inst_list)
     point_list, path_len = get_points(new_inst_list)
@@ -48,4 +48,4 @@ def parseData(line_list):
     return inst_list
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

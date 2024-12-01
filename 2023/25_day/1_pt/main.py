@@ -3,7 +3,7 @@ import networkx as nx
 
 ## Using Stoer-Wagner Algorithm
 
-def main(data):
+def solve(data):
     conn_list = parseData(data.split('\n'))
     graph = nx.Graph(conn_list)
     subgraphs = nx.stoer_wagner(graph)[1]
@@ -18,4 +18,4 @@ def parseData(line_list):
     return conn_list
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     curr_num = data
     for i in range(50):
         curr_num = lookAndSay(curr_num)
@@ -21,4 +21,4 @@ def lookAndSay(num):
     return output
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

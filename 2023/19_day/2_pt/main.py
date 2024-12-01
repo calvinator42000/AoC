@@ -16,7 +16,7 @@ class Condition:
             self.result = statement
 
 
-def main(data):
+def solve(data):
     workflows = parseData(data.split('\n'))
     accepted = getRanges(workflows)
     total_accepted = 0
@@ -74,4 +74,4 @@ def parseData(data_lines):
 
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

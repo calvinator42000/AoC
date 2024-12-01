@@ -3,7 +3,7 @@ import sys
 alpha = 'abcdefghijklmnopqrstuvwxyz'
 new_alpha = 'abcdefghjkmnpqrstuvwxyz'
 
-def main(data):
+def solve(data):
     password = fixInitial(data)
     if password == data:
         password = incPass(password)
@@ -75,4 +75,4 @@ def incPass(password):
     return "".join(next_pass)
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

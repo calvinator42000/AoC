@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     seq = data.split(',')
     hash_sum = 0
     for inst in seq:
@@ -16,4 +16,4 @@ def get_hash(string):
     return curr_val
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

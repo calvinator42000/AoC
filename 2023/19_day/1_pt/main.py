@@ -39,7 +39,7 @@ class Condition:
             return self.result
 
 
-def main(data):
+def solve(data):
     workflows, part_list = parseData(data.split('\n'))
     total_rating = 0
     for part in part_list:
@@ -80,4 +80,4 @@ def parseData(data_lines):
 
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

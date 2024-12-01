@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     x_rate = 1000000
     gal_list, rows_wo_gals, cols_wo_gals = getExpandedGalaxy(data.split('\n'))
     path_sum = 0
@@ -30,4 +30,4 @@ def getExpandedGalaxy(line_list):
 
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

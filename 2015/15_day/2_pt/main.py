@@ -44,7 +44,7 @@ class Ingredient:
     def __str__(self):
         return self.name + ": " + str(self.quantity)
 
-def main(data):
+def solve(data):
     ingredient_list = parseData(data.split('\n'))
     recipe_list = generateRecipeList(ingredient_list)
     recipe_list.sort(key = lambda recipe: recipe.score, reverse = True)
@@ -83,4 +83,4 @@ def parseData(data_list):
 
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

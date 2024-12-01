@@ -1,6 +1,6 @@
 import sys
 
-def main(data):
+def solve(data):
     grid = parseData(data.split('\n'))
     path = {}
     moveBeam((0,-1), (0,1), grid, path)    
@@ -35,4 +35,4 @@ def parseData(line_list):
     return grid
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))

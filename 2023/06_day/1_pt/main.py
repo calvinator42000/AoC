@@ -1,7 +1,7 @@
 import sys
 import re
 
-def main(data):
+def solve(data):
     line_list = data.split('\n')
     time_list, dist_list = map(lambda x: list(map(int, list(re.findall(r'\d+', x)))), line_list)
     race_list = list(zip(time_list, dist_list))
@@ -11,4 +11,4 @@ def main(data):
     return margin_mult
 
 if __name__ == "__main__":
-    print(main(open(sys.argv[1]).read().rstrip()))
+    print(solve(open(sys.argv[1]).read().rstrip()))
