@@ -13,16 +13,12 @@ def parse_data(line_list):
         if line:
             if parsing_rules:
                 a,b = map(int, line.split('|'))
-                if a in rules:
-                    rules[a].after.add(b)
-                else:
+                if not a in rules:
                     rules[a] = Page()
-                    rules[a].after.add(b)
-                if b in rules:
-                    rules[b].before.add(a)
-                else:
+                rules[a].after.add(b)
+                if not b in rules:
                     rules[b] = Page()
-                    rules[b].before.add(a)
+                rules[b].before.add(a)
             else:
                 updates.append(list(map(int, line.split(','))))
         else:
