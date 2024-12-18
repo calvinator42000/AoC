@@ -1,6 +1,7 @@
 import datetime
 import argparse
 from importlib import import_module
+from time import time
 
 # Get arguments for the date and part, with the defaults being the current date and Part 1
 cur_date = datetime.datetime.now()
@@ -10,6 +11,7 @@ parser.add_argument("-y", "--year", default=cur_date.year, type=int)
 parser.add_argument("-d", "--day", default=cur_date.day, type=int)
 parser.add_argument("-p", "--part", default=1, type=int)
 parser.add_argument("-t", "--test", nargs='?', const=1, default=0, type=int)
+parser.add_argument("-v", "--verbose", action="store_true", default=False)
 
 args = parser.parse_args()
 year = args.year
@@ -26,15 +28,19 @@ if test:
 else:
     input_file = "input"
 
-print("%02d/%d Part %d" %(day, year, part))
-
 input_path = "%d/%02d_day/%01d_pt/%s" % (year, day, part, input_file)
-print("Input_Path:", input_path)
 package_path = "%d.%02d_day.%01d_pt" % (year, day, part)
-print("Package_Path:", package_path)
 mod = import_module(".main", package_path)
-print()
 
-print("Result:")
+if args.verbose:
+    print("%02d/%d Part %d" %(day, year, part))
+    print("Input_Path:", input_path)
+    print("Package_Path:", package_path)
+    print()
+
+start = time()
 result = mod.solve(open(input_path).read().rstrip())
+end = time()
+
+print("Result (%.06f s):" % (end-start))
 print(result)
