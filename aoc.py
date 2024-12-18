@@ -36,7 +36,7 @@ if args.verbose:
     print("%02d/%d Part %d" %(day, year, part))
     print("Input_Path:", input_path)
     print("Package_Path:", package_path)
-    print()
+print()
 
 start = time()
 result = mod.solve(open(input_path).read().rstrip())
